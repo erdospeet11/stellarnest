@@ -89,6 +89,7 @@
                     readonly={!isEditing}
                     on:mousedown={onInputClick}
                     placeholder="Write a note..."
+                    on:input={() => dispatch("itemUpdate", item)}
                 ></textarea>
             </div>
         {:else if item.type === "image"}
